@@ -24,6 +24,17 @@ I created this app using React on the frontend, while NodeJS with Express on the
 
 ### HOW TO's
 
+###### How to deploy server+database on Render.com:
+1. Deploy this server -> Render provide a simple connection with GitHub & Deploy
+2. Create a database (PostgreSQL)
+3. Go to the database *info* section -> *connections* -> Copy the *"External Database URL"*
+4. Open your CLI (ex. PowerShell for Windows) -> run command `psql paste-the-url-by-render`
+5. Once connected run the <a href="https://github.com/Aleksandar15/smart-brain-alek_server/blob/master/database.sql">SQL commands</a>.
+6. In your server's *Environment* settings include 3 keys: 
+-  1. *Clarifai_KEY* (your key);
+-  2. *DATABASE_URL* (the *External Database URL*)
+-  3. *PORT*: *10000*
+
 ###### How to clone the project?
 
 ##### Clone with HTTPS URL: `git clone https://github.com/Aleksandar15/smart-brain-alek_server.git`
